@@ -1,0 +1,13 @@
+{
+  "itemGroup.beyondomega": "Example Mod Tab",
+  "block.beyondomega.example_block": "Example Block",
+  "item.beyondomega.example_item": "Example Item",
+
+  "beyondomega.configuration.title": "Beyond Omega Configs",
+  "beyondomega.configuration.section.beyondomega.common.toml": "Beyond Omega Configs",
+  "beyondomega.configuration.section.beyondomega.common.toml.title": "Beyond Omega Configs",
+  "beyondomega.configuration.items": "Item List",
+  "beyondomega.configuration.logDirtBlock": "Log Dirt Block",
+  "beyondomega.configuration.magicNumberIntroduction": "Magic Number Text",
+  "beyondomega.configuration.magicNumber": "Magic Number"
+}
