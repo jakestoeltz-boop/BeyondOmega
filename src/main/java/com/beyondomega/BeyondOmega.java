@@ -1,5 +1,6 @@
 package com.beyondomega;
 
+import com.beyondomega.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -45,6 +46,8 @@ public class BeyondOmega {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        ModItems.register(modEventBus);
+
         NeoForge.EVENT_BUS.register(this);
 
         // Register the item to a creative tab
@@ -60,7 +63,11 @@ public class BeyondOmega {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.RIFTSTONE_SHARD);
+            event.accept(ModItems.UMBRAL_SHARD);
+            event.accept(ModItems.ZENITH_CORE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
