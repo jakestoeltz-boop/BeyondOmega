@@ -1,6 +1,7 @@
 package com.beyondomega.creativemodetab;
 
 import com.beyondomega.BeyondOmega;
+import com.beyondomega.block.ModBlocks;
 import com.beyondomega.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -21,18 +22,18 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ZENITH_CORE.get()))
                     .title(Component.translatable("creativetab.beyondomega.zenith_core_items"))
                     .withTabsBefore(CreativeModeTabs.INGREDIENTS)
-                    .withTabsAfter(Identifier.fromNamespaceAndPath(BeyondOmega.MOD_ID, "zenith_ore_blocks_tab"))
+                    .withTabsAfter(Identifier.fromNamespaceAndPath(BeyondOmega.MOD_ID, "zenith_end_ore_blocks_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.RIFTSTONE_SHARD);
                         output.accept(ModItems.UMBRAL_SHARD);
                         output.accept(ModItems.ZENITH_CORE);
                     }).build());
 
-    public static final Supplier<CreativeModeTab> ZENITH_ORE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("zenith_ore_blocks_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ZENITH_CORE.get()))
+    public static final Supplier<CreativeModeTab> ZENITH_END_ORE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("zenith_end_ore_blocks_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ZENITH_END_ORE.get()))
                     .title(Component.translatable("creativetab.beyondomega.zenith_ore_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.RIFTSTONE_SHARD);
+                        output.accept(ModBlocks.ZENITH_END_ORE);
                     }).build());
 
 

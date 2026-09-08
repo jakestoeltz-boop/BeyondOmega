@@ -1,6 +1,7 @@
 package com.beyondomega.datagen;
 
 import com.beyondomega.BeyondOmega;
+import com.beyondomega.block.ModBlocks;
 import com.beyondomega.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
@@ -19,5 +20,7 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.UMBRAL_SHARD.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.ZENITH_CORE.get(), ModelTemplates.FLAT_ITEM);
 
+        /* BLOCKS */
+        blockModels.createTrivialCube(ModBlocks.ZENITH_END_ORE.get());
     }
 }

@@ -2,6 +2,9 @@
   "item.beyondomega.riftstone_shard": "Riftstone Shard",
   "item.beyondomega.umbral_shard": "Umbral Shard",
   "item.beyondomega.zenith_core": "Zenith Core",
+
+  "block.beyondomega.zenith_end_ore": "Zenith End Ore",
+
   "creativetab.beyondomega.zenith_core_items": "Beyond Omega Items",
   "creativetab.beyondomega.zenith_ore_blocks": "Beyond Omega Blocks"
 }

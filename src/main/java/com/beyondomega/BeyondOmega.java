@@ -1,5 +1,6 @@
 package com.beyondomega;
 
+import com.beyondomega.block.ModBlocks;
 import com.beyondomega.creativemodetab.ModCreativeModTabs;
 import com.beyondomega.item.ModItems;
 import org.slf4j.Logger;
@@ -50,6 +51,7 @@ public class BeyondOmega {
         ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
 
@@ -70,6 +72,9 @@ public class BeyondOmega {
             event.accept(ModItems.RIFTSTONE_SHARD);
             event.accept(ModItems.UMBRAL_SHARD);
             event.accept(ModItems.ZENITH_CORE);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.ZENITH_END_ORE);
         }
     }
 
