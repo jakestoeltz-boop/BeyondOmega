@@ -1,5 +1,6 @@
 package com.beyondomega;
 
+import com.beyondomega.creativemodetab.ModCreativeModTabs;
 import com.beyondomega.item.ModItems;
 import org.slf4j.Logger;
 
@@ -45,6 +46,8 @@ public class BeyondOmega {
     public BeyondOmega(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+
+        ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
 
