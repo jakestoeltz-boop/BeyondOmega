@@ -20,7 +20,15 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.UMBRAL_SHARD.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.ZENITH_CORE.get(), ModelTemplates.FLAT_ITEM);
 
+        itemModels.generateFlatItem(ModItems.ZENITH_SWORD.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.ZENITH_PICKAXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.ZENITH_SHOVEL.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.ZENITH_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.ZENITH_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateBow(ModItems.ZENITH_BOW.get());
+
         /* BLOCKS */
         blockModels.createTrivialCube(ModBlocks.ZENITH_END_ORE.get());
+        blockModels.createTrivialCube(ModBlocks.ZENITH_BLOCK.get());
     }
 }

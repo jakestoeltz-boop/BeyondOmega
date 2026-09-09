@@ -27,6 +27,13 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.RIFTSTONE_SHARD);
                         output.accept(ModItems.UMBRAL_SHARD);
                         output.accept(ModItems.ZENITH_CORE);
+
+                        output.accept(ModItems.ZENITH_SWORD);
+                        output.accept(ModItems.ZENITH_PICKAXE);
+                        output.accept(ModItems.ZENITH_SHOVEL);
+                        output.accept(ModItems.ZENITH_AXE);
+                        output.accept(ModItems.ZENITH_HOE);
+                        output.accept(ModItems.ZENITH_BOW);
                     }).build());
 
     public static final Supplier<CreativeModeTab> ZENITH_END_ORE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("zenith_end_ore_blocks_tab",
@@ -34,6 +41,7 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.beyondomega.zenith_ore_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.ZENITH_END_ORE);
+                        output.accept(ModBlocks.ZENITH_BLOCK);
                     }).build());
 
 

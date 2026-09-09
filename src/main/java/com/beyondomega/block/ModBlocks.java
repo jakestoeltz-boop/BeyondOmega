@@ -23,6 +23,10 @@ public class ModBlocks {
             (properties) -> new DropExperienceBlock(UniformInt.of(5, 9),
                     properties.strength(7f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+    public static final DeferredBlock<Block> ZENITH_BLOCK = registerBlock("zenith_block",
+            properties -> new Block(properties.strength(8f)
+                    .requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
+
 
 
 

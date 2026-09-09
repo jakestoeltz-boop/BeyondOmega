@@ -75,6 +75,7 @@ public class BeyondOmega {
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.ZENITH_END_ORE);
+            event.accept(ModBlocks.ZENITH_BLOCK);
         }
     }
 
