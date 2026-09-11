@@ -2,6 +2,7 @@ package com.beyondomega.datagen;
 
 import com.beyondomega.BeyondOmega;
 import com.beyondomega.block.ModBlocks;
+import com.beyondomega.item.ModArmorMaterials;
 import com.beyondomega.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
@@ -26,6 +27,11 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.ZENITH_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(ModItems.ZENITH_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateBow(ModItems.ZENITH_BOW.get());
+
+        itemModels.generateTrimmableItem(ModItems.ZENITH_HELMET.get(), ModArmorMaterials.ZENITH_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModels.generateTrimmableItem(ModItems.ZENITH_CHESTPLATE.get(), ModArmorMaterials.ZENITH_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModels.generateTrimmableItem(ModItems.ZENITH_LEGGINGS.get(), ModArmorMaterials.ZENITH_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModels.generateTrimmableItem(ModItems.ZENITH_BOOTS.get(), ModArmorMaterials.ZENITH_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
         /* BLOCKS */
         blockModels.createTrivialCube(ModBlocks.ZENITH_END_ORE.get());

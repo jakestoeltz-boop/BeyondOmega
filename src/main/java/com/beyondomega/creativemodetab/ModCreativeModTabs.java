@@ -34,6 +34,11 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.ZENITH_AXE);
                         output.accept(ModItems.ZENITH_HOE);
                         output.accept(ModItems.ZENITH_BOW);
+
+                        output.accept(ModItems.ZENITH_HELMET);
+                        output.accept(ModItems.ZENITH_CHESTPLATE);
+                        output.accept(ModItems.ZENITH_LEGGINGS);
+                        output.accept(ModItems.ZENITH_BOOTS);
                     }).build());
 
     public static final Supplier<CreativeModeTab> ZENITH_END_ORE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("zenith_end_ore_blocks_tab",

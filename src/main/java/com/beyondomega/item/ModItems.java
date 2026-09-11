@@ -2,6 +2,7 @@ package com.beyondomega.item;
 
 import com.beyondomega.BeyondOmega;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.equipment.ArmorType;
 import net.neoforged.bus.EventBus;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -34,6 +35,15 @@ public class ModItems {
                     .durability(2500)       // Custom durability (Vanilla bow is 384)
                     .rarity(Rarity.EPIC)    // Epic rarity (gives purple text name)
                     .fireResistant()));   // Prevents destruction in lava/fire));
+
+    public static final DeferredItem<Item> ZENITH_HELMET = ITEMS.registerItem("zenith_helmet",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.ZENITH_ARMOR_MATERIAL, ArmorType.HELMET)));
+    public static final DeferredItem<Item> ZENITH_CHESTPLATE = ITEMS.registerItem("zenith_chestplate",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.ZENITH_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
+    public static final DeferredItem<Item> ZENITH_LEGGINGS = ITEMS.registerItem("zenith_leggings",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.ZENITH_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
+    public static final DeferredItem<Item> ZENITH_BOOTS = ITEMS.registerItem("zenith_boots",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.ZENITH_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
 
     public static void register(IEventBus eventBus){

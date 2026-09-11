@@ -30,5 +30,10 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ItemTags.AXES).add(ModItems.ZENITH_AXE.getKey());
         tag(ItemTags.HOES).add(ModItems.ZENITH_HOE.getKey());
         tag(ItemTags.BOW_ENCHANTABLE).add(ModItems.ZENITH_BOW.getKey());
+
+        tag(ItemTags.HEAD_ARMOR).add(ModItems.ZENITH_HELMET.getKey());
+        tag(ItemTags.CHEST_ARMOR).add(ModItems.ZENITH_CHESTPLATE.getKey());
+        tag(ItemTags.LEG_ARMOR).add(ModItems.ZENITH_LEGGINGS.getKey());
+        tag(ItemTags.FOOT_ARMOR).add(ModItems.ZENITH_BOOTS.getKey());
     }
 }

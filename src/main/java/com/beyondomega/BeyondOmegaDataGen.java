@@ -1,9 +1,6 @@
 package com.beyondomega;
 
-import com.beyondomega.datagen.ModBlockLootTableProvider;
-import com.beyondomega.datagen.ModBlockTagsProvider;
-import com.beyondomega.datagen.ModModelProvider;
-import com.beyondomega.datagen.ModRecipeProvider;
+import com.beyondomega.datagen.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
@@ -28,5 +25,6 @@ public class BeyondOmegaDataGen {
         generator.addProvider(true, new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
         generator.addProvider(true, new ModRecipeProvider.Runner(packOutput, lookupProvider));
+        generator.addProvider(true, new ModEquipmentAssetProvider(packOutput));
     }
 }
