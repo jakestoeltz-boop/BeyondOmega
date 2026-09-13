@@ -3,6 +3,7 @@ package com.beyondomega;
 import com.beyondomega.block.ModBlocks;
 import com.beyondomega.creativemodetab.ModCreativeModTabs;
 import com.beyondomega.item.ModItems;
+import net.minecraft.data.worldgen.placement.OrePlacements;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -33,7 +34,6 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(BeyondOmega.MOD_ID)
 public class BeyondOmega {
