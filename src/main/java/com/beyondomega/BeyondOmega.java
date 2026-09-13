@@ -2,6 +2,7 @@ package com.beyondomega;
 
 import com.beyondomega.block.ModBlocks;
 import com.beyondomega.creativemodetab.ModCreativeModTabs;
+import com.beyondomega.entity.ModEntities;
 import com.beyondomega.item.ModItems;
 import net.minecraft.data.worldgen.placement.OrePlacements;
 import org.slf4j.Logger;
@@ -52,6 +53,7 @@ public class BeyondOmega {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
 
