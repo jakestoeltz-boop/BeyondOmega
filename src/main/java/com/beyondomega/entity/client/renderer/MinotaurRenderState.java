@@ -6,4 +6,6 @@ public class MinotaurRenderState extends LivingEntityRenderState {
 
     public float animationTime;
     public boolean isMoving;
+    public boolean isSlamming;
+    public int slamAnimationTick;
 }

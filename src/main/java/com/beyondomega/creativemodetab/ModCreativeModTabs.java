@@ -27,6 +27,9 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.RIFTSTONE_SHARD);
                         output.accept(ModItems.UMBRAL_SHARD);
                         output.accept(ModItems.ZENITH_CORE);
+                        output.accept(ModItems.KEYSTONE_FRAGMENT);
+                        output.accept(ModItems.KEYSTONE_SHARD);
+                        output.accept(ModItems.KEYSTONE_PORTAL_CORE);
 
                         output.accept(ModItems.ZENITH_SWORD);
                         output.accept(ModItems.ZENITH_PICKAXE);
@@ -45,8 +48,13 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ZENITH_END_ORE.get()))
                     .title(Component.translatable("creativetab.beyondomega.zenith_ore_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        //ores
                         output.accept(ModBlocks.ZENITH_END_ORE);
+                        output.accept(ModBlocks.KEYSTONE_ORE);
+                        //building blocks with no function
                         output.accept(ModBlocks.ZENITH_BLOCK);
+                        //blocks with functions
+                        output.accept(ModBlocks.GREEK_PORTAL_FRAME);
                     }).build());
 
 

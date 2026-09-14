@@ -52,6 +52,7 @@ public class MinotaurModel extends EntityModel<MinotaurRenderState> {
 	private final KeyframeAnimation idleAnimation;
 	private final KeyframeAnimation idleToRunAnimation;
 	private final KeyframeAnimation runToIdleAnimation;
+	private final KeyframeAnimation slamAnimation;
 
 	private boolean wasMoving = false;
 	private long transitionStartTime = -1L;
@@ -93,6 +94,7 @@ public class MinotaurModel extends EntityModel<MinotaurRenderState> {
 		this.idleAnimation = MinotaurAnimations.idle.bake(root);
 		this.idleToRunAnimation = MinotaurAnimations.idle_to_run.bake(root);
 		this.runToIdleAnimation = MinotaurAnimations.run_to_idle.bake(root);
+		this.slamAnimation = MinotaurAnimations.slam.bake(root);
 	}
 
 	public static LayerDefinition createBodyLayer() {
@@ -646,10 +648,23 @@ public class MinotaurModel extends EntityModel<MinotaurRenderState> {
 
 		this.root.getAllParts().forEach(ModelPart::resetPose);
 
+		if (state.isSlamming) {
+			long slamTime = state.slamAnimationTick * 50L;
+
+			this.slamAnimation.apply(
+					slamTime,
+					1.0F
+			);
+
+			this.root.yRot = (float) Math.PI;
+			return;
+		}
+
 		boolean isMoving = state.walkAnimationSpeed > 0.01F;
 
 		// Convert Minecraft ticks to milliseconds for KeyframeAnimation
 		long currentTime = (long) (state.ageInTicks * 50.0F);
+
 
 		// Detect when movement changes
 		if (isMoving != this.wasMoving) {

@@ -19,13 +19,18 @@ public class ModPlacedFeatures {
     // CF given to the Placed Features
     // How Many will be placed and some relation in where
     public static final ResourceKey<PlacedFeature> ZENITH_END_ORE_PLACED_KEY = registerKey("zenith_end_ore_placed");
+    public static final ResourceKey<PlacedFeature> KEYSTONE_ORE_PLACED_KEY = registerKey("keystone_ore_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, ZENITH_END_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ZENITH_END_ORE_KEY),
-                OrePlacements.commonOrePlacement(12,
+                OrePlacements.commonOrePlacement(4,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(90))));
+
+        register(context, KEYSTONE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.KEYSTONE_ORE_KEY),
+                OrePlacements.commonOrePlacement(6,
+                        HeightRangePlacement.triangle(VerticalAnchor.absolute(-60), VerticalAnchor.absolute(-10))));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

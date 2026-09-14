@@ -46,6 +46,8 @@ public class MinotaurRenderer extends LivingEntityRenderer<
         state.animationTime = entity.tickCount + partialTick;
 
         state.isMoving = entity.getDeltaMovement().horizontalDistanceSqr() > 0.0001D;
+        state.isSlamming = entity.isSlamming();
+        state.slamAnimationTick = entity.getSlamAnimationTick();
     }
     @Override
     public Identifier getTextureLocation(MinotaurRenderState state) {

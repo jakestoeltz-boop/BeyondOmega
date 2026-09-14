@@ -20,13 +20,20 @@ public class ModConfiguredFeatures {
     // CF -> Describes HOW something looks like, how it is built.
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> ZENITH_END_ORE_KEY = registerKey("zenith_end_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> KEYSTONE_ORE_KEY = registerKey("keystone_ore");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
+        RuleTest overworldReplaceables = new BlockMatchTest(Blocks.DEEPSLATE);
+
 
         register(context, ZENITH_END_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
-                ModBlocks.ZENITH_END_ORE.get().defaultBlockState(), 12));
+                ModBlocks.ZENITH_END_ORE.get().defaultBlockState(), 4));
+
+        register(context, KEYSTONE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldReplaceables,
+                ModBlocks.KEYSTONE_ORE.get().defaultBlockState(), 6));
     }
+
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, Identifier.fromNamespaceAndPath(BeyondOmega.MOD_ID, name));

@@ -2,6 +2,9 @@
   "item.beyondomega.riftstone_shard": "Riftstone Shard",
   "item.beyondomega.umbral_shard": "Umbral Shard",
   "item.beyondomega.zenith_core": "Zenith Core",
+  "item.beyondomega.keystone_shard": "Keystone Shard",
+  "item.beyondomega.keystone_fragment": "Keystone Fragment",
+  "item.beyondomega.keystone_portal_core": "Keystone Portal Core",
 
   "item.beyondomega.zenith_sword": "Zenith Sword",
   "item.beyondomega.zenith_pickaxe": "Zenith Pickaxe",
@@ -16,7 +19,11 @@
   "item.beyondomega.zenith_boots": "Zenith Boots",
 
   "block.beyondomega.zenith_end_ore": "Zenith End Ore",
+  "block.beyondomega.keystone_ore": "Keystone Ore",
+
   "block.beyondomega.zenith_block": "Zenith Block",
+
+  "block.beyondomega.greek_portal_frame": "Greek Portal Frame",
 
   "creativetab.beyondomega.zenith_core_items": "Beyond Omega Items",
   "creativetab.beyondomega.zenith_ore_blocks": "Beyond Omega Blocks"

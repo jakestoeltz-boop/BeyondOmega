@@ -30,7 +30,7 @@ public class ModEntities {
                                     MinotaurEntity::new,
                                     MobCategory.MONSTER
                             )
-                            .sized(1.0F, 2.0F)
+                            .sized(3.5F, 6.0F)
                             .build(
                                     ResourceKey.create(
                                             Registries.ENTITY_TYPE,

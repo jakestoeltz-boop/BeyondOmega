@@ -16,6 +16,7 @@ public class ModBiomeModifiers {
     // PF to BiomeModifier
     // NeoForge Class -> Places PlacedFeatures into specific Biomes
     public static final ResourceKey<BiomeModifier> ADD_ZENITH_END_ORE = registerKey("add_zenith_end_ore");
+    public static final ResourceKey<BiomeModifier> ADD_KEYSTONE_ORE = registerKey("add_keystone_ore");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -30,6 +31,11 @@ public class ModBiomeModifiers {
         context.register(ADD_ZENITH_END_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ZENITH_END_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_KEYSTONE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.KEYSTONE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
     }
 

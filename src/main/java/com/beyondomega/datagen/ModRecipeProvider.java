@@ -53,6 +53,28 @@ public class ModRecipeProvider extends RecipeProvider {
                 .group("zenith_core")
                 .save(output);
 
+        shaped(RecipeCategory.MISC, ModItems.KEYSTONE_PORTAL_CORE.get())
+                .pattern("BCB")
+                .pattern("CAC")
+                .pattern("BCB")
+                .define('A', ModItems.KEYSTONE_FRAGMENT.get())
+                .define('B', ModItems.KEYSTONE_SHARD.get())
+                .define('C', Items.RAW_GOLD)
+                .unlockedBy(getHasName(ModItems.KEYSTONE_SHARD.get()), has(ModItems.KEYSTONE_SHARD))
+                .save(output);
+
+        shaped(RecipeCategory.MISC, ModBlocks.GREEK_PORTAL_FRAME.get())
+                .pattern("CAC")
+                .pattern("DBD")
+                .pattern("CEC")
+                .define('A', ModItems.KEYSTONE_PORTAL_CORE.get())
+                .define('B', Items.RAW_GOLD_BLOCK)
+                .define('C', Blocks.CHISELED_SANDSTONE)
+                .define('D', ModItems.KEYSTONE_SHARD.get())
+                .define('E', Blocks.SMOOTH_SANDSTONE)
+                .unlockedBy(getHasName(ModItems.KEYSTONE_SHARD.get()), has(ModItems.KEYSTONE_SHARD))
+                .save(output);
+
         shapeless(RecipeCategory.MISC, ModItems.ZENITH_CORE.get(), 9)
                 .requires(ModBlocks.ZENITH_BLOCK)
                 .unlockedBy(getHasName(ModBlocks.ZENITH_BLOCK.get()), has(ModBlocks.ZENITH_BLOCK))

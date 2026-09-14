@@ -15,6 +15,10 @@ public class ModItems {
     public static final DeferredItem<Item> UMBRAL_SHARD = ITEMS.registerSimpleItem("umbral_shard");
     public static final DeferredItem<Item> ZENITH_CORE = ITEMS.registerSimpleItem("zenith_core");
 
+    public static final DeferredItem<Item> KEYSTONE_SHARD = ITEMS.registerSimpleItem("keystone_shard");
+    public static final DeferredItem<Item> KEYSTONE_FRAGMENT = ITEMS.registerSimpleItem("keystone_fragment");
+    public static final DeferredItem<Item> KEYSTONE_PORTAL_CORE = ITEMS.registerSimpleItem("keystone_portal_core");
+
     public static final DeferredItem<Item> ZENITH_SWORD = ITEMS.registerItem("zenith_sword",
             properties -> new Item(properties.sword(ModToolTiers.ZENITH, 3, -2.4f)));
 

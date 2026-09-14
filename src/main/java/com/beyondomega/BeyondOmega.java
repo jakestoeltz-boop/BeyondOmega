@@ -71,13 +71,8 @@ public class BeyondOmega {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.RIFTSTONE_SHARD);
-            event.accept(ModItems.UMBRAL_SHARD);
-            event.accept(ModItems.ZENITH_CORE);
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.ZENITH_END_ORE);
-            event.accept(ModBlocks.ZENITH_BLOCK);
         }
     }
 

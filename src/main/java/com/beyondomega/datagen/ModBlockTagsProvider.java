@@ -36,12 +36,18 @@ protected void addTags(HolderLookup.Provider provider) {
     // 1. Make Zenith Core Ore mineable with a pickaxe
     this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .add(ModBlocks.ZENITH_END_ORE.getKey())
-            .add(ModBlocks.ZENITH_BLOCK.getKey());
+            .add(ModBlocks.ZENITH_BLOCK.getKey())
+            .add(ModBlocks.GREEK_PORTAL_FRAME.getKey())
+            .add(ModBlocks.KEYSTONE_ORE.getKey());
 
 
     // 2. Add Zenith Core Ore to your custom Zenith requirement tag
     this.tag(ModTags.Blocks.NEEDS_ZENITH_TOOL)
             .add(ModBlocks.ZENITH_BLOCK.getKey());
+
+    this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
+            .add(ModBlocks.KEYSTONE_ORE.getKey())
+            .add(ModBlocks.GREEK_PORTAL_FRAME.getKey());
 
     this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
             .add(ModBlocks.ZENITH_END_ORE.getKey());
