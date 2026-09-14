@@ -1,6 +1,8 @@
 package com.beyondomega.block;
 
 import com.beyondomega.BeyondOmega;
+import com.beyondomega.block.custom.GreekPortalBlock;
+import com.beyondomega.block.custom.GreekPortalFrameBlock;
 import com.beyondomega.item.ModItems;
 import com.google.common.eventbus.EventBus;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -32,8 +34,17 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
 
     public static final DeferredBlock<Block> GREEK_PORTAL_FRAME = registerBlock("greek_portal_frame",
-            properties -> new Block(properties.strength(8f)
+            properties -> new GreekPortalFrameBlock(properties.strength(8f)
                     .requiresCorrectToolForDrops().sound(SoundType.LODESTONE)));
+    public static final DeferredBlock<Block> GREEK_PORTAL =
+            registerBlock(
+                    "greek_portal",
+                    properties -> new GreekPortalBlock(properties
+                            .noCollision()
+                            .noOcclusion()
+                            .lightLevel(state -> 12)
+                    )
+            );
 
 
 

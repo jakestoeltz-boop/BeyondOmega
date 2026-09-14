@@ -32,6 +32,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.ZENITH_BLOCK.get());
         dropSelf(ModBlocks.GREEK_PORTAL_FRAME.get());
 
+        add(ModBlocks.GREEK_PORTAL.get(), noDrop());
+
         add(ModBlocks.ZENITH_END_ORE.get(),
                 createMultipleOreDrops(ModBlocks.ZENITH_END_ORE.get(), ModItems.ZENITH_CORE.get(), 1, 2));
 

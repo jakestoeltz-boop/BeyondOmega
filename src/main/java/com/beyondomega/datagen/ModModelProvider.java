@@ -44,6 +44,7 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createTrivialCube(ModBlocks.ZENITH_END_ORE.get());
         blockModels.createTrivialCube(ModBlocks.ZENITH_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.KEYSTONE_ORE.get());
+        blockModels.createTrivialCube(ModBlocks.GREEK_PORTAL.get());
         TexturedModel.Provider greekPortalFrameModel = TexturedModel.createDefault(
                 block -> new TextureMapping()
                         .put(
