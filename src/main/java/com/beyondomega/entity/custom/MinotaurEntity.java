@@ -55,7 +55,7 @@ public class MinotaurEntity extends Monster {
                 .add(Attributes.MOVEMENT_SPEED, 0.28D)
 
                 // Basic attack damage
-                .add(Attributes.ATTACK_DAMAGE, 10.0D)
+                .add(Attributes.ATTACK_DAMAGE, 4.0D)
 
                 // How far away it can notice players
                 .add(Attributes.FOLLOW_RANGE, 32.0D);

@@ -50,6 +50,11 @@ public class MinotaurModel extends EntityModel<MinotaurRenderState> {
 
 	private final KeyframeAnimation runningAnimation;
 	private final KeyframeAnimation idleAnimation;
+	private final KeyframeAnimation idleToRunAnimation;
+	private final KeyframeAnimation runToIdleAnimation;
+
+	private boolean wasMoving = false;
+	private long transitionStartTime = -1L;
 
 	public MinotaurModel(ModelPart root) {
 		super(root);
@@ -86,6 +91,8 @@ public class MinotaurModel extends EntityModel<MinotaurRenderState> {
 		this.left_foot = this.left_leg.getChild("left_foot");
 		this.runningAnimation = MinotaurAnimations.running.bake(root);
 		this.idleAnimation = MinotaurAnimations.idle.bake(root);
+		this.idleToRunAnimation = MinotaurAnimations.idle_to_run.bake(root);
+		this.runToIdleAnimation = MinotaurAnimations.run_to_idle.bake(root);
 	}
 
 	public static LayerDefinition createBodyLayer() {
@@ -639,11 +646,45 @@ public class MinotaurModel extends EntityModel<MinotaurRenderState> {
 
 		this.root.getAllParts().forEach(ModelPart::resetPose);
 
-		if (state.walkAnimationSpeed > 0.01F) {
+		boolean isMoving = state.walkAnimationSpeed > 0.01F;
+
+		// Convert Minecraft ticks to milliseconds for KeyframeAnimation
+		long currentTime = (long) (state.ageInTicks * 50.0F);
+
+		// Detect when movement changes
+		if (isMoving != this.wasMoving) {
+			this.transitionStartTime = currentTime;
+			this.wasMoving = isMoving;
+		}
+
+		long transitionTime = currentTime - this.transitionStartTime;
+
+		// Your Blockbench transition animations are 1 second long
+		if (this.transitionStartTime >= 0L && transitionTime < 1000L) {
+
+			if (isMoving) {
+
+				// All fours -> standing up
+				this.idleToRunAnimation.apply(
+						transitionTime,
+						1.0F
+				);
+
+			} else {
+
+				// Standing -> all fours
+				this.runToIdleAnimation.apply(
+						transitionTime,
+						1.0F
+				);
+
+			}
+
+		} else if (isMoving) {
 
 			this.runningAnimation.applyWalk(
 					state.walkAnimationPos,
-					state.walkAnimationSpeed,
+					Math.max(state.walkAnimationSpeed, 1.0F),
 					1.0F,
 					1.0F
 			);
@@ -651,7 +692,7 @@ public class MinotaurModel extends EntityModel<MinotaurRenderState> {
 		} else {
 
 			this.idleAnimation.apply(
-					(long) state.ageInTicks,
+					currentTime,
 					1.0F
 			);
 		}
