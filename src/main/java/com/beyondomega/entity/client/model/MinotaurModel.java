@@ -1,7 +1,5 @@
 package com.beyondomega.entity.client.model;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.beyondomega.entity.client.animation.MinotaurAnimations;
 import com.beyondomega.entity.client.renderer.MinotaurRenderState;
 import net.minecraft.client.model.EntityModel;
@@ -13,7 +11,6 @@ import net.minecraft.client.model.geom.builders.CubeListBuilder;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
-import net.minecraft.client.renderer.entity.state.EntityRenderState;
 import net.minecraft.resources.Identifier;
 import net.minecraft.client.animation.KeyframeAnimation;
 
@@ -52,6 +49,7 @@ public class MinotaurModel extends EntityModel<MinotaurRenderState> {
 	private final ModelPart left_foot;
 
 	private final KeyframeAnimation runningAnimation;
+	private final KeyframeAnimation idleAnimation;
 
 	public MinotaurModel(ModelPart root) {
 		super(root);
@@ -87,6 +85,7 @@ public class MinotaurModel extends EntityModel<MinotaurRenderState> {
 		this.left_leg = this.left_hip.getChild("left_leg");
 		this.left_foot = this.left_leg.getChild("left_foot");
 		this.runningAnimation = MinotaurAnimations.running.bake(root);
+		this.idleAnimation = MinotaurAnimations.idle.bake(root);
 	}
 
 	public static LayerDefinition createBodyLayer() {
@@ -638,12 +637,25 @@ public class MinotaurModel extends EntityModel<MinotaurRenderState> {
 	public void setupAnim(MinotaurRenderState state) {
 		super.setupAnim(state);
 
-		this.runningAnimation.applyWalk(
-				state.walkAnimationPos,
-				state.walkAnimationSpeed,
-				1.0F,
-				1.0F
-		);
+		this.root.getAllParts().forEach(ModelPart::resetPose);
+
+		if (state.walkAnimationSpeed > 0.01F) {
+
+			this.runningAnimation.applyWalk(
+					state.walkAnimationPos,
+					state.walkAnimationSpeed,
+					1.0F,
+					1.0F
+			);
+
+		} else {
+
+			this.idleAnimation.apply(
+					(long) state.ageInTicks,
+					1.0F
+			);
+		}
+
 		this.root.yRot = (float) Math.PI;
 	}
 }

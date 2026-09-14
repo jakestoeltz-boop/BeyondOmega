@@ -30,13 +30,13 @@ public class MinotaurAnimations {
 			new Keyframe(3.2083F, KeyframeAnimations.posVec(0.0F, -25.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("head", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
-			new Keyframe(0.0F, KeyframeAnimations.degreeVec(405.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(0.2083F, KeyframeAnimations.degreeVec(365.97F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(0.4167F, KeyframeAnimations.degreeVec(370.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(0.7917F, KeyframeAnimations.degreeVec(387.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(1.6667F, KeyframeAnimations.degreeVec(387.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(1.9167F, KeyframeAnimations.degreeVec(385.1055F, 3.9648F, 3.0486F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(3.2083F, KeyframeAnimations.degreeVec(405.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
+			new Keyframe(0.0F, KeyframeAnimations.degreeVec(45.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(0.2083F, KeyframeAnimations.degreeVec(8.47F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(0.4167F, KeyframeAnimations.degreeVec(10.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(0.7917F, KeyframeAnimations.degreeVec(27.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(1.6667F, KeyframeAnimations.degreeVec(27.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(1.9167F, KeyframeAnimations.degreeVec(25.1055F, 3.9648F, 3.0486F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(3.2083F, KeyframeAnimations.degreeVec(45.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("left_pivot_for_hand", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(-35.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
@@ -45,12 +45,12 @@ public class MinotaurAnimations {
 			new Keyframe(3.2083F, KeyframeAnimations.degreeVec(-35.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("right_shoulder", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
-			new Keyframe(0.0F, KeyframeAnimations.degreeVec(440.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(0.375F, KeyframeAnimations.degreeVec(512.7234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(0.75F, KeyframeAnimations.degreeVec(450.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(1.625F, KeyframeAnimations.degreeVec(450.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(1.9167F, KeyframeAnimations.degreeVec(450.2264F, -11.3202F, -4.0661F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(3.2083F, KeyframeAnimations.degreeVec(440.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR)
+			new Keyframe(0.0F, KeyframeAnimations.degreeVec(80.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(0.375F, KeyframeAnimations.degreeVec(152.7234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(0.75F, KeyframeAnimations.degreeVec(90.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(1.625F, KeyframeAnimations.degreeVec(90.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(1.9167F, KeyframeAnimations.degreeVec(90.2264F, -11.3202F, -4.0661F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(3.2083F, KeyframeAnimations.degreeVec(80.22F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("right_shoulder", new AnimationChannel(AnimationChannel.Targets.POSITION, 
 			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
@@ -153,12 +153,12 @@ public class MinotaurAnimations {
 			new Keyframe(1.0F, KeyframeAnimations.posVec(0.0F, -9.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("head", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
-			new Keyframe(0.0F, KeyframeAnimations.degreeVec(405.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(1.0F, KeyframeAnimations.degreeVec(347.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
+			new Keyframe(0.0F, KeyframeAnimations.degreeVec(47.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(1.0F, KeyframeAnimations.degreeVec(-10.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("right_shoulder", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
-			new Keyframe(0.0F, KeyframeAnimations.degreeVec(440.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(1.0F, KeyframeAnimations.degreeVec(417.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
+			new Keyframe(0.0F, KeyframeAnimations.degreeVec(80.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(1.0F, KeyframeAnimations.degreeVec(57.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("right_shoulder", new AnimationChannel(AnimationChannel.Targets.POSITION, 
 			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
@@ -226,14 +226,14 @@ public class MinotaurAnimations {
 			new Keyframe(1.0F, KeyframeAnimations.posVec(0.0F, -9.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("head", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
-			new Keyframe(0.0F, KeyframeAnimations.degreeVec(347.0736F, 14.6364F, -3.3192F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(0.5F, KeyframeAnimations.degreeVec(347.3134F, -9.7606F, 2.1856F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(1.0F, KeyframeAnimations.degreeVec(347.0736F, 14.6364F, -3.3192F), AnimationChannel.Interpolations.LINEAR)
+			new Keyframe(0.0F, KeyframeAnimations.degreeVec(-7.9264F, 14.6364F, -3.3192F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(0.5F, KeyframeAnimations.degreeVec(-10.1866F, -9.7606F, 2.1856F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(1.0F, KeyframeAnimations.degreeVec(-10.4264F, 14.6364F, -3.3192F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("right_shoulder", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
-			new Keyframe(0.0F, KeyframeAnimations.degreeVec(417.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(0.5F, KeyframeAnimations.degreeVec(297.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(1.0F, KeyframeAnimations.degreeVec(417.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
+			new Keyframe(0.0F, KeyframeAnimations.degreeVec(57.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(0.5F, KeyframeAnimations.degreeVec(-62.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(1.0F, KeyframeAnimations.degreeVec(57.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("left_shoulder", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(-45.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
@@ -291,18 +291,18 @@ public class MinotaurAnimations {
 			new Keyframe(3.0F, KeyframeAnimations.posVec(0.0F, -25.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("head", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
-			new Keyframe(0.0F, KeyframeAnimations.degreeVec(405.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(0.625F, KeyframeAnimations.degreeVec(418.6684F, -34.124F, -42.661F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(0.9167F, KeyframeAnimations.degreeVec(418.6684F, -34.124F, -42.661F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(1.5F, KeyframeAnimations.degreeVec(405.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(2.0417F, KeyframeAnimations.degreeVec(413.5996F, 28.5363F, 32.941F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(2.375F, KeyframeAnimations.degreeVec(413.5996F, 28.5363F, 32.941F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(3.0F, KeyframeAnimations.degreeVec(405.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
+			new Keyframe(0.0F, KeyframeAnimations.degreeVec(45.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(0.625F, KeyframeAnimations.degreeVec(58.6684F, -34.124F, -42.661F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(0.9167F, KeyframeAnimations.degreeVec(61.1684F, -34.124F, -42.661F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(1.5F, KeyframeAnimations.degreeVec(45.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(2.0417F, KeyframeAnimations.degreeVec(56.0996F, 28.5363F, 32.941F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(2.375F, KeyframeAnimations.degreeVec(56.0996F, 28.5363F, 32.941F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(3.0F, KeyframeAnimations.degreeVec(45.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("right_shoulder", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
-			new Keyframe(0.0F, KeyframeAnimations.degreeVec(440.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(1.5F, KeyframeAnimations.degreeVec(440.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(3.0F, KeyframeAnimations.degreeVec(440.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR)
+			new Keyframe(0.0F, KeyframeAnimations.degreeVec(80.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(1.5F, KeyframeAnimations.degreeVec(80.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(3.0F, KeyframeAnimations.degreeVec(80.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("right_shoulder", new AnimationChannel(AnimationChannel.Targets.POSITION, 
 			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
@@ -414,12 +414,12 @@ public class MinotaurAnimations {
 			new Keyframe(1.0F, KeyframeAnimations.posVec(0.0F, -25.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("head", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
-			new Keyframe(0.0F, KeyframeAnimations.degreeVec(347.0736F, 14.6364F, -3.3192F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(1.0F, KeyframeAnimations.degreeVec(405.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
+			new Keyframe(0.0F, KeyframeAnimations.degreeVec(-12.9264F, 14.6364F, -3.3192F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(1.0F, KeyframeAnimations.degreeVec(47.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("right_shoulder", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
-			new Keyframe(0.0F, KeyframeAnimations.degreeVec(417.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
-			new Keyframe(1.0F, KeyframeAnimations.degreeVec(440.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR)
+			new Keyframe(0.0F, KeyframeAnimations.degreeVec(57.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
+			new Keyframe(1.0F, KeyframeAnimations.degreeVec(80.2234F, -6.3202F, -4.0462F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.addAnimation("right_shoulder", new AnimationChannel(AnimationChannel.Targets.POSITION, 
 			new Keyframe(1.0F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
