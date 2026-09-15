@@ -2,10 +2,10 @@
   "type": "beyondomega:greek_realm",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "minecraft:overworld",
+    "settings": "beyondomega:greek_realm",
     "biome_source": {
-      "type": "minecraft:multi_noise",
-      "preset": "minecraft:overworld"
+      "type": "minecraft:fixed",
+      "biome": "beyondomega:ancient_highlands"
     }
   }
 }

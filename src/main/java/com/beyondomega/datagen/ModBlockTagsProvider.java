@@ -59,6 +59,14 @@ protected void addTags(HolderLookup.Provider provider) {
     this.tag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
             .addTag(ModTags.Blocks.NEEDS_ZENITH_TOOL);
 
+    this.tag(BlockTags.DIRT)
+            .add(ModBlocks.ANCIENT_DIRT.getKey())
+            .add(ModBlocks.ANCIENT_GRASS_BLOCK.getKey());
+
+    this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
+            .add(ModBlocks.ANCIENT_DIRT.getKey())
+            .add(ModBlocks.ANCIENT_GRASS_BLOCK.getKey());
+
         }
 
     }

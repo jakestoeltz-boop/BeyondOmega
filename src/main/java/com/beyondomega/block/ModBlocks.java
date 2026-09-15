@@ -1,6 +1,7 @@
 package com.beyondomega.block;
 
 import com.beyondomega.BeyondOmega;
+import com.beyondomega.block.custom.AncientGrassBlock;
 import com.beyondomega.block.custom.GreekPortalBlock;
 import com.beyondomega.block.custom.GreekPortalFrameBlock;
 import com.beyondomega.item.ModItems;
@@ -9,6 +10,7 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.GrassBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
@@ -32,6 +34,22 @@ public class ModBlocks {
     public static final DeferredBlock<Block> ZENITH_BLOCK = registerBlock("zenith_block",
             properties -> new Block(properties.strength(8f)
                     .requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
+
+    public static final DeferredBlock<Block> ANCIENT_DIRT = registerBlock("ancient_dirt",
+            properties -> new Block(properties.strength(4f)
+                    .sound(SoundType.ROOTED_DIRT)));
+
+    public static final DeferredBlock<Block> ANCIENT_GRASS_BLOCK =
+            registerBlock(
+                    "ancient_grass_block",
+                    properties -> new AncientGrassBlock(
+                            properties
+                                    .randomTicks()
+                                    .strength(0.6F)
+                                    .sound(SoundType.GRASS)
+                    )
+            );
+
 
     public static final DeferredBlock<Block> GREEK_PORTAL_FRAME = registerBlock("greek_portal_frame",
             properties -> new GreekPortalFrameBlock(properties.strength(8f)

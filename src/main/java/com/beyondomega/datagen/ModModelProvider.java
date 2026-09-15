@@ -2,17 +2,20 @@ package com.beyondomega.datagen;
 
 import com.beyondomega.BeyondOmega;
 import com.beyondomega.block.ModBlocks;
+import com.beyondomega.block.custom.GreekPortalBlock;
+import com.beyondomega.block.custom.PortalQuadrant;
 import com.beyondomega.item.ModArmorMaterials;
 import com.beyondomega.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
-import net.minecraft.client.data.models.model.ModelTemplates;
-import net.minecraft.client.data.models.model.TextureMapping;
-import net.minecraft.client.data.models.model.TextureSlot;
-import net.minecraft.client.data.models.model.TexturedModel;
+import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.client.data.models.blockstates.PropertyDispatch;
+import net.minecraft.client.data.models.model.*;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.Identifier;
+
+import java.util.Optional;
 
 public class ModModelProvider extends ModelProvider {
     public ModModelProvider(PackOutput output) {
@@ -44,7 +47,83 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createTrivialCube(ModBlocks.ZENITH_END_ORE.get());
         blockModels.createTrivialCube(ModBlocks.ZENITH_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.KEYSTONE_ORE.get());
-        blockModels.createTrivialCube(ModBlocks.GREEK_PORTAL.get());
+        blockModels.createTrivialCube(ModBlocks.ANCIENT_DIRT.get());
+
+        ModelTemplate greekPortalTemplate = new ModelTemplate(
+                Optional.of(
+                        Identifier.fromNamespaceAndPath(
+                                BeyondOmega.MOD_ID,
+                                "block/greek_portal_template"
+                        )
+                ),
+                Optional.empty(),
+                TextureSlot.TEXTURE
+        );
+
+        var portal = ModBlocks.GREEK_PORTAL.get();
+
+        var nwModel = greekPortalTemplate.create(
+                Identifier.fromNamespaceAndPath(BeyondOmega.MOD_ID, "block/greek_portal_nw"),
+                new TextureMapping()
+                        .put(
+                                TextureSlot.ALL,
+                                TextureMapping.getBlockTexture(portal, "_nw")
+                        ),
+                blockModels.modelOutput
+        );
+
+        var neModel = greekPortalTemplate.create(
+                Identifier.fromNamespaceAndPath(BeyondOmega.MOD_ID, "block/greek_portal_ne"),
+                new TextureMapping()
+                        .put(
+                                TextureSlot.ALL,
+                                TextureMapping.getBlockTexture(portal, "_ne")
+                        ),
+                blockModels.modelOutput
+        );
+
+        var swModel = greekPortalTemplate.create(
+                Identifier.fromNamespaceAndPath(BeyondOmega.MOD_ID, "block/greek_portal_sw"),
+                new TextureMapping()
+                        .put(
+                                TextureSlot.ALL,
+                                TextureMapping.getBlockTexture(portal, "_sw")
+                        ),
+                blockModels.modelOutput
+        );
+
+        var seModel = greekPortalTemplate.create(
+                Identifier.fromNamespaceAndPath(BeyondOmega.MOD_ID, "block/greek_portal_se"),
+                new TextureMapping()
+                        .put(
+                                TextureSlot.ALL,
+                                TextureMapping.getBlockTexture(portal, "_se")
+                        ),
+                blockModels.modelOutput
+        );
+        blockModels.blockStateOutput.accept(
+                MultiVariantGenerator.dispatch(portal)
+                        .with(
+                                PropertyDispatch.initial(GreekPortalBlock.QUADRANT)
+                                        .select(
+                                                PortalQuadrant.NW,
+                                                BlockModelGenerators.plainVariant(nwModel)
+                                        )
+                                        .select(
+                                                PortalQuadrant.NE,
+                                                BlockModelGenerators.plainVariant(neModel)
+                                        )
+                                        .select(
+                                                PortalQuadrant.SW,
+                                                BlockModelGenerators.plainVariant(swModel)
+                                        )
+                                        .select(
+                                                PortalQuadrant.SE,
+                                                BlockModelGenerators.plainVariant(seModel)
+                                        )
+                        )
+        );
+
         TexturedModel.Provider greekPortalFrameModel = TexturedModel.createDefault(
                 block -> new TextureMapping()
                         .put(
@@ -69,6 +148,32 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createTrivialBlock(
                 ModBlocks.GREEK_PORTAL_FRAME.get(),
                 greekPortalFrameModel
+        );
+
+        TexturedModel.Provider AncientGrassBlockModel = TexturedModel.createDefault(
+                block -> new TextureMapping()
+                        .put(
+                                TextureSlot.SIDE,
+                                TextureMapping.getBlockTexture(block, "_side")
+                        )
+                        .put(
+                                TextureSlot.TOP,
+                                TextureMapping.getBlockTexture(block, "_top")
+                        )
+                        .put(
+                                TextureSlot.BOTTOM,
+                                TextureMapping.getBlockTexture(block, "_bottom")
+                        )
+                        .put(
+                                TextureSlot.PARTICLE,
+                                TextureMapping.getBlockTexture(block, "_side")
+                        ),
+                ModelTemplates.CUBE_BOTTOM_TOP
+        );
+
+        blockModels.createTrivialBlock(
+                ModBlocks.ANCIENT_GRASS_BLOCK.get(),
+                AncientGrassBlockModel
         );
     }
 }

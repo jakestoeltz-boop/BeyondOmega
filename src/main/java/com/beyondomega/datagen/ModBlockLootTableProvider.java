@@ -31,6 +31,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.ZENITH_END_ORE.get());
         dropSelf(ModBlocks.ZENITH_BLOCK.get());
         dropSelf(ModBlocks.GREEK_PORTAL_FRAME.get());
+        dropSelf(ModBlocks.ANCIENT_DIRT.get());
+        dropSelf(ModBlocks.ANCIENT_GRASS_BLOCK.get());
+
 
         add(ModBlocks.GREEK_PORTAL.get(), noDrop());
 
