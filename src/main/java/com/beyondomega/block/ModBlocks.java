@@ -4,6 +4,7 @@ import com.beyondomega.BeyondOmega;
 import com.beyondomega.block.custom.AncientGrassBlock;
 import com.beyondomega.block.custom.GreekPortalBlock;
 import com.beyondomega.block.custom.GreekPortalFrameBlock;
+import com.beyondomega.block.custom.SunbakedGrassBlock;
 import com.beyondomega.item.ModItems;
 import com.google.common.eventbus.EventBus;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -36,13 +37,43 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
 
     public static final DeferredBlock<Block> ANCIENT_DIRT = registerBlock("ancient_dirt",
-            properties -> new Block(properties.strength(4f)
+            properties -> new Block(properties.strength(1f)
                     .sound(SoundType.ROOTED_DIRT)));
+
+    public static final DeferredBlock<Block> SUNBAKED_DIRT = registerBlock("sunbaked_dirt",
+            properties -> new Block(properties.strength(1f)
+                    .sound(SoundType.ROOTED_DIRT)));
+
+    public static final DeferredBlock<Block> LIMESTONE = registerBlock("limestone",
+            properties -> new Block(properties.strength(2f)
+                    .sound(SoundType.TUFF_BRICKS)));
+
+    public static final DeferredBlock<Block> WEATHERED_LIMESTONE = registerBlock("weathered_limestone",
+            properties -> new Block(properties.strength(2f)
+                    .sound(SoundType.TUFF_BRICKS)));
+
+    public static final DeferredBlock<Block> MARBLE = registerBlock("marble",
+            properties -> new Block(properties.strength(2f)
+                    .sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> MARBLE_BRICKS = registerBlock("marble_bricks",
+            properties -> new Block(properties.strength(2f)
+                    .sound(SoundType.STONE)));
 
     public static final DeferredBlock<Block> ANCIENT_GRASS_BLOCK =
             registerBlock(
                     "ancient_grass_block",
                     properties -> new AncientGrassBlock(
+                            properties
+                                    .randomTicks()
+                                    .strength(0.6F)
+                                    .sound(SoundType.GRASS)
+                    )
+            );
+    public static final DeferredBlock<Block> SUNBAKED_GRASS_BLOCK =
+            registerBlock(
+                    "sunbaked_grass_block",
+                    properties -> new SunbakedGrassBlock(
                             properties
                                     .randomTicks()
                                     .strength(0.6F)

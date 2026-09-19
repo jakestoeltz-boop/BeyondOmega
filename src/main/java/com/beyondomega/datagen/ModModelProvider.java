@@ -48,6 +48,11 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createTrivialCube(ModBlocks.ZENITH_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.KEYSTONE_ORE.get());
         blockModels.createTrivialCube(ModBlocks.ANCIENT_DIRT.get());
+        blockModels.createTrivialCube(ModBlocks.SUNBAKED_DIRT.get());
+        blockModels.createTrivialCube(ModBlocks.LIMESTONE.get());
+        blockModels.createTrivialCube(ModBlocks.WEATHERED_LIMESTONE.get());
+        blockModels.createTrivialCube(ModBlocks.MARBLE.get());
+        blockModels.createTrivialCube(ModBlocks.MARBLE_BRICKS.get());
 
         ModelTemplate greekPortalTemplate = new ModelTemplate(
                 Optional.of(
@@ -174,6 +179,32 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createTrivialBlock(
                 ModBlocks.ANCIENT_GRASS_BLOCK.get(),
                 AncientGrassBlockModel
+        );
+
+        TexturedModel.Provider SunbakedGrassBlockModel = TexturedModel.createDefault(
+                block -> new TextureMapping()
+                        .put(
+                                TextureSlot.SIDE,
+                                TextureMapping.getBlockTexture(block, "_side")
+                        )
+                        .put(
+                                TextureSlot.TOP,
+                                TextureMapping.getBlockTexture(block, "_top")
+                        )
+                        .put(
+                                TextureSlot.BOTTOM,
+                                TextureMapping.getBlockTexture(block, "_bottom")
+                        )
+                        .put(
+                                TextureSlot.PARTICLE,
+                                TextureMapping.getBlockTexture(block, "_side")
+                        ),
+                ModelTemplates.CUBE_BOTTOM_TOP
+        );
+
+        blockModels.createTrivialBlock(
+                ModBlocks.SUNBAKED_GRASS_BLOCK.get(),
+                SunbakedGrassBlockModel
         );
     }
 }

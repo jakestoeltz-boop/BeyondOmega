@@ -1,0 +1,51 @@
+{
+  "minotaur_ambient": {
+    "sounds": [
+      "beyondomega:entity/minotaur/minotaur_ambient"
+    ]
+  },
+
+  "minotaur_attack": {
+    "sounds": [
+      "beyondomega:entity/minotaur/minotaur_attack"
+    ]
+  },
+
+  "minotaur_before_slam": {
+    "sounds": [
+      "beyondomega:entity/minotaur/minotaur_before_slam"
+    ]
+  },
+
+  "minotaur_death": {
+    "sounds": [
+      "beyondomega:entity/minotaur/minotaur_death"
+    ]
+  },
+
+  "minotaur_hurt": {
+    "sounds": [
+      "beyondomega:entity/minotaur/minotaur_hurt"
+    ]
+  },
+
+  "minotaur_step": {
+    "sounds": [
+      "beyondomega:entity/minotaur/minotaur_step"
+    ]
+  },
+
+  "minotaur_slam": {
+    "sounds": [
+      "beyondomega:entity/minotaur/minotaur_slam"
+    ]
+  },
+  "minotaur_music": {
+    "sounds": [
+      {
+        "name": "beyondomega:music/minotaur_fight",
+        "stream": true
+      }
+    ]
+  }
+}

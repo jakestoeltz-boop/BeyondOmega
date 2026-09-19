@@ -30,11 +30,19 @@ public class MinotaurRenderer extends LivingEntityRenderer<
                 1.5F
         );
     }
+    @Override
+    protected boolean shouldShowName(
+            MinotaurEntity entity,
+            double distanceToCameraSq
+    ) {
+        return false;
+    }
 
     @Override
     public MinotaurRenderState createRenderState() {
         return new MinotaurRenderState();
     }
+
     @Override
     public void extractRenderState(
             MinotaurEntity entity,

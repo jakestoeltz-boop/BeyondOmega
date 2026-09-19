@@ -53,6 +53,13 @@ public class ModRecipeProvider extends RecipeProvider {
                 .group("zenith_core")
                 .save(output);
 
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MARBLE_BRICKS.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.MARBLE.get())
+                .unlockedBy(getHasName(ModBlocks.MARBLE.get()), has(ModBlocks.MARBLE))
+                .save(output);
+
         shaped(RecipeCategory.MISC, ModItems.KEYSTONE_PORTAL_CORE.get())
                 .pattern("BCB")
                 .pattern("CAC")

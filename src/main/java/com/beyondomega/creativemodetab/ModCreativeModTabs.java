@@ -53,9 +53,15 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.KEYSTONE_ORE);
                         //building blocks with no function
                         output.accept(ModBlocks.ZENITH_BLOCK);
+                        output.accept(ModBlocks.MARBLE_BRICKS);
                         //naturally spawning blocks
+                        output.accept(ModBlocks.WEATHERED_LIMESTONE);
+                        output.accept(ModBlocks.LIMESTONE);
+                        output.accept(ModBlocks.MARBLE);
                         output.accept(ModBlocks.ANCIENT_DIRT);
+                        output.accept(ModBlocks.SUNBAKED_DIRT);
                         output.accept(ModBlocks.ANCIENT_GRASS_BLOCK);
+                        output.accept(ModBlocks.SUNBAKED_GRASS_BLOCK);
                         //blocks with functions
                         output.accept(ModBlocks.GREEK_PORTAL_FRAME);
                     }).build());

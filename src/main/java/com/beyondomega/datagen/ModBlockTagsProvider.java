@@ -38,6 +38,10 @@ protected void addTags(HolderLookup.Provider provider) {
             .add(ModBlocks.ZENITH_END_ORE.getKey())
             .add(ModBlocks.ZENITH_BLOCK.getKey())
             .add(ModBlocks.GREEK_PORTAL_FRAME.getKey())
+            .add(ModBlocks.LIMESTONE.getKey())
+            .add(ModBlocks.WEATHERED_LIMESTONE.getKey())
+            .add(ModBlocks.MARBLE.getKey())
+            .add(ModBlocks.MARBLE_BRICKS.getKey())
             .add(ModBlocks.KEYSTONE_ORE.getKey());
 
 
@@ -65,7 +69,9 @@ protected void addTags(HolderLookup.Provider provider) {
 
     this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
             .add(ModBlocks.ANCIENT_DIRT.getKey())
-            .add(ModBlocks.ANCIENT_GRASS_BLOCK.getKey());
+            .add(ModBlocks.SUNBAKED_DIRT.getKey())
+            .add(ModBlocks.ANCIENT_GRASS_BLOCK.getKey())
+            .add(ModBlocks.SUNBAKED_GRASS_BLOCK.getKey());
 
         }
 

@@ -35,6 +35,8 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import com.beyondomega.worldgen.structure.ModStructures;
+import com.beyondomega.sound.ModSounds;
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(BeyondOmega.MOD_ID)
 public class BeyondOmega {
@@ -54,6 +56,8 @@ public class BeyondOmega {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModSounds.register(modEventBus);
+        ModStructures.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
 

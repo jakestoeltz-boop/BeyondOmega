@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "beyondomega:minotaur_labyrinth",
+      "required": false
+    }
+  ]
+}

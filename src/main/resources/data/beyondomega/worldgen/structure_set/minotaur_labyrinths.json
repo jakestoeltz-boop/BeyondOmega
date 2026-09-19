@@ -1,0 +1,15 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 84736291,
+    "separation": 24,
+    "spacing": 48
+  },
+
+  "structures": [
+    {
+      "structure": "beyondomega:minotaur_labyrinth",
+      "weight": 1
+    }
+  ]
+}
