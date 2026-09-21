@@ -37,6 +37,12 @@
   "creativetab.beyondomega.zenith_core_items": "Beyond Omega Items",
   "creativetab.beyondomega.zenith_ore_blocks": "Beyond Omega Blocks",
 
-  "entity.beyondomega.minotaur": "Minotaur"
+  "entity.beyondomega.minotaur": "Minotaur",
 
+  "advancements.beyondomega.greek.root.title": "Beyond Omega",
+  "advancements.beyondomega.greek.root.description": "Legends of the ancient world await.",
+  "advancements.beyondomega.greek.defeat_minotaur.title": "Slayer of the Minotaur",
+  "advancements.beyondomega.greek.defeat_minotaur.description": "Defeat the Minotaur within the Labyrinth.",
+  "advancements.beyondomega.greek.enter_greek_realm.title": "A World of Legends",
+  "advancements.beyondomega.greek.enter_greek_realm.description": "Enter the Greek Realm for the first time."
 }

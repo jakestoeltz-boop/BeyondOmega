@@ -17,6 +17,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import com.beyondomega.block.custom.MinotaurArenaTriggerBlock;
 
 import java.util.function.Function;
 
@@ -93,6 +94,22 @@ public class ModBlocks {
                             .noOcclusion()
                             .lightLevel(state -> 12)
                     )
+            );
+    public static final DeferredBlock<MinotaurArenaTriggerBlock> MINOTAUR_ARENA_TRIGGER =
+            BLOCKS.registerBlock(
+                    "minotaur_arena_trigger",
+
+                    properties ->
+                            new MinotaurArenaTriggerBlock(
+                                    properties
+                                            .noCollision()
+                                            .noOcclusion()
+                                            .noLootTable()
+                                            .strength(
+                                                    -1.0F,
+                                                    3600000.0F
+                                            )
+                            )
             );
 
 

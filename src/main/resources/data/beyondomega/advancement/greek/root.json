@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "beyondomega:beyond_omega_tab_icon"
+    },
+    "title": {
+      "translate": "advancements.beyondomega.greek.root.title"
+    },
+    "description": {
+      "translate": "advancements.beyondomega.greek.root.description"
+    },
+    "background": "beyondomega:gui/advancements/cosmic_background",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "unlock": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

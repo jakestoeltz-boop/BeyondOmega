@@ -43,6 +43,10 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateTrimmableItem(ModItems.ZENITH_LEGGINGS.get(), ModArmorMaterials.ZENITH_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
         itemModels.generateTrimmableItem(ModItems.ZENITH_BOOTS.get(), ModArmorMaterials.ZENITH_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
+        //achievement
+        itemModels.generateFlatItem(ModItems.BEYOND_OMEGA_TAB_ICON.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.MINOTAUR_ACHIEVEMENT_ICON.get(), ModelTemplates.FLAT_ITEM);
+
         /* BLOCKS */
         blockModels.createTrivialCube(ModBlocks.ZENITH_END_ORE.get());
         blockModels.createTrivialCube(ModBlocks.ZENITH_BLOCK.get());
@@ -53,6 +57,11 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createTrivialCube(ModBlocks.WEATHERED_LIMESTONE.get());
         blockModels.createTrivialCube(ModBlocks.MARBLE.get());
         blockModels.createTrivialCube(ModBlocks.MARBLE_BRICKS.get());
+
+        blockModels.createAirLikeBlock(
+                ModBlocks.MINOTAUR_ARENA_TRIGGER.get(),
+                TextureMapping.getBlockTexture(ModBlocks.LIMESTONE.get())
+        );
 
         ModelTemplate greekPortalTemplate = new ModelTemplate(
                 Optional.of(

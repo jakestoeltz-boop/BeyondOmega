@@ -5,6 +5,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AnimationState;
@@ -24,8 +25,11 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.BossEvent;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.ValueInput;
+import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.List;
 
@@ -46,6 +50,18 @@ public class MinotaurEntity extends Monster {
                     MinotaurEntity.class,
                     EntityDataSerializers.INT
             );
+
+    // =========================================================
+// BEACON COMPLETION SETTINGS
+// =========================================================
+
+    // Horizontal distance to search around the Minotaur.
+    private static final int BEACON_SEARCH_RADIUS = 50;
+
+    // How far upward to search for the beacon.
+    private static final int BEACON_SEARCH_HEIGHT = 96;
+
+    private boolean beaconChanged = false;
 
 
     // =========================================================
@@ -77,7 +93,7 @@ public class MinotaurEntity extends Monster {
     private static final int SLAM_DAMAGE_TICK = 15;
 
     // 100 ticks = 5 seconds.
-    private static final int SLAM_COOLDOWN = 100;
+    private static final int SLAM_COOLDOWN = 250;
 
     private static final int SLAM_WINDUP_DURATION = 10;
 
@@ -92,7 +108,7 @@ public class MinotaurEntity extends Monster {
     private static final double SLAM_VERTICAL_RANGE = 4.0D;
 
     // Damage dealt by the slam.
-    private static final float SLAM_DAMAGE = 25.0F;
+    private static final float SLAM_DAMAGE = 40.0F;
 
     // Strength of the knockback.
     private static final double SLAM_KNOCKBACK = 5D;
@@ -120,6 +136,7 @@ public class MinotaurEntity extends Monster {
         this.setPersistenceRequired();
         this.setCustomName(null);
         this.setCustomNameVisible(false);
+        this.xpReward = 650;
         this.bossEvent = new ServerBossEvent(
                 this.getUUID(),
                 Component.literal("Minotaur"),
@@ -195,6 +212,75 @@ public class MinotaurEntity extends Monster {
 
         builder.define(SLAMMING, false);
         builder.define(SLAM_ANIMATION_TICK, 0);
+    }
+    @Override
+    public void die(DamageSource source) {
+
+        super.die(source);
+
+        if (this.beaconChanged) {
+            return;
+        }
+
+        if (!(this.level() instanceof ServerLevel level)) {
+            return;
+        }
+
+        this.beaconChanged = true;
+
+        this.changeBeaconToDefeated(level);
+    }
+    private void changeBeaconToDefeated(
+            ServerLevel level
+    ) {
+
+        BlockPos center =
+                this.blockPosition();
+
+        BlockPos minPos =
+                center.offset(
+                        -BEACON_SEARCH_RADIUS,
+                        0,
+                        -BEACON_SEARCH_RADIUS
+                );
+
+        BlockPos maxPos =
+                center.offset(
+                        BEACON_SEARCH_RADIUS,
+                        BEACON_SEARCH_HEIGHT,
+                        BEACON_SEARCH_RADIUS
+                );
+
+        for (BlockPos pos :
+                BlockPos.betweenClosed(
+                        minPos,
+                        maxPos
+                )) {
+
+            // Change red stained glass to light blue.
+            if (level.getBlockState(pos)
+                    .is(Blocks.STAINED_GLASS.red())) {
+
+                level.setBlock(
+                        pos,
+                        Blocks.STAINED_GLASS.lightBlue()
+                                .defaultBlockState(),
+                        3
+                );
+            }
+
+            // Also works with glass panes if you use any.
+            if (level.getBlockState(pos)
+                    .is(Blocks.STAINED_GLASS.red())) {
+
+                level.setBlock(
+                        pos,
+                        Blocks.STAINED_GLASS.lightBlue()
+                                .defaultBlockState(),
+                        3
+                );
+            }
+        }
     }
 
 
@@ -689,7 +775,7 @@ public class MinotaurEntity extends Monster {
 
                 .add(
                         Attributes.MAX_HEALTH,
-                        500.0D
+                        750.0D
                 )
 
                 .add(
@@ -699,7 +785,7 @@ public class MinotaurEntity extends Monster {
 
                 .add(
                         Attributes.ATTACK_DAMAGE,
-                        12.0D
+                        15.0D
                 );
     }
 }

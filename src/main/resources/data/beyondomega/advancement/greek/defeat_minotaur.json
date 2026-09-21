@@ -1,0 +1,28 @@
+{
+  "parent": "beyondomega:greek/enter_greek_realm",
+  "display": {
+    "icon": {
+      "id": "beyondomega:minotaur_achievement_icon"
+    },
+    "title": {
+      "translate": "advancements.beyondomega.greek.defeat_minotaur.title"
+    },
+    "description": {
+      "translate": "advancements.beyondomega.greek.defeat_minotaur.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill_minotaur": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "minecraft:entity_type": "beyondomega:minotaur"
+        }
+      }
+    }
+  }
+}

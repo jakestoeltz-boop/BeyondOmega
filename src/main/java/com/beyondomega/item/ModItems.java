@@ -20,7 +20,7 @@ public class ModItems {
     public static final DeferredItem<Item> KEYSTONE_PORTAL_CORE = ITEMS.registerSimpleItem("keystone_portal_core");
 
     public static final DeferredItem<Item> ZENITH_SWORD = ITEMS.registerItem("zenith_sword",
-            properties -> new Item(properties.sword(ModToolTiers.ZENITH, 3, -2.4f)));
+            properties -> new Item(properties.sword(ModToolTiers.ZENITH, 15, -2.4f)));
 
     public static final DeferredItem<Item> ZENITH_PICKAXE = ITEMS.registerItem("zenith_pickaxe",
             properties -> new Item(properties.pickaxe(ModToolTiers.ZENITH, 1, -2.8f)));
@@ -48,6 +48,11 @@ public class ModItems {
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.ZENITH_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
     public static final DeferredItem<Item> ZENITH_BOOTS = ITEMS.registerItem("zenith_boots",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.ZENITH_ARMOR_MATERIAL, ArmorType.BOOTS)));
+
+    //achievements
+    public static final DeferredItem<Item> BEYOND_OMEGA_TAB_ICON = ITEMS.registerSimpleItem("beyond_omega_tab_icon");
+    public static final DeferredItem<Item> MINOTAUR_ACHIEVEMENT_ICON = ITEMS.registerSimpleItem("minotaur_achievement_icon");
+
 
 
     public static void register(IEventBus eventBus){

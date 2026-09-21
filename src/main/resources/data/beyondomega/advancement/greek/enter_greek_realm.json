@@ -1,0 +1,32 @@
+{
+  "parent": "beyondomega:greek/root",
+
+  "display": {
+    "icon": {
+      "id": "beyondomega:greek_portal_frame"
+    },
+
+    "title": {
+      "translate": "advancements.beyondomega.greek.enter_greek_realm.title"
+    },
+
+    "description": {
+      "translate": "advancements.beyondomega.greek.enter_greek_realm.description"
+    },
+
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+
+  "criteria": {
+    "enter_greek_realm": {
+      "trigger": "minecraft:changed_dimension",
+
+      "conditions": {
+        "to": "beyondomega:greek_realm"
+      }
+    }
+  }
+}
