@@ -35,5 +35,54 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ItemTags.CHEST_ARMOR).add(ModItems.ZENITH_CHESTPLATE.getKey());
         tag(ItemTags.LEG_ARMOR).add(ModItems.ZENITH_LEGGINGS.getKey());
         tag(ItemTags.FOOT_ARMOR).add(ModItems.ZENITH_BOOTS.getKey());
+
+
+        tag(ModTags.Items.TRANSFORMABLE_ITEMS)
+                .add(ModItems.GREEK_STEEL_INGOT.getKey());
+
+        tag(ModTags.Items.GREEK_STEEL_REPAIRABLE)
+                .add(ModItems.GREEK_STEEL_INGOT.getKey());
+
+        tag(ItemTags.SWORDS).add(ModItems.GREEK_STEEL_SWORD.getKey());
+        tag(ItemTags.PICKAXES).add(ModItems.GREEK_STEEL_PICKAXE.getKey());
+        tag(ItemTags.SHOVELS).add(ModItems.GREEK_STEEL_SHOVEL.getKey());
+        tag(ItemTags.AXES).add(ModItems.GREEK_STEEL_AXE.getKey());
+        tag(ItemTags.HOES).add(ModItems.GREEK_STEEL_HOE.getKey());
+
+        tag(ModTags.Items.TRANSFORMABLE_ITEMS)
+                .add(ModItems.ORICHALCUM_INGOT.getKey());
+
+        tag(ModTags.Items.ORICHALCUM_REPAIRABLE)
+                .add(ModItems.ORICHALCUM_INGOT.getKey());
+
+        tag(ItemTags.SWORDS).add(ModItems.ORICHALCUM_SWORD.getKey());
+        tag(ItemTags.PICKAXES).add(ModItems.ORICHALCUM_PICKAXE.getKey());
+        tag(ItemTags.SHOVELS).add(ModItems.ORICHALCUM_SHOVEL.getKey());
+        tag(ItemTags.AXES).add(ModItems.ORICHALCUM_AXE.getKey());
+        tag(ItemTags.HOES).add(ModItems.ORICHALCUM_HOE.getKey());
+
+        tag(ModTags.Items.TRANSFORMABLE_ITEMS)
+                .add(ModItems.STYGIAN_INGOT.getKey());
+
+        tag(ModTags.Items.STYGIAN_REPAIRABLE)
+                .add(ModItems.STYGIAN_INGOT.getKey());
+
+        tag(ItemTags.SWORDS).add(ModItems.STYGIAN_SWORD.getKey());
+        tag(ItemTags.PICKAXES).add(ModItems.STYGIAN_PICKAXE.getKey());
+        tag(ItemTags.SHOVELS).add(ModItems.STYGIAN_SHOVEL.getKey());
+        tag(ItemTags.AXES).add(ModItems.STYGIAN_AXE.getKey());
+        tag(ItemTags.HOES).add(ModItems.STYGIAN_HOE.getKey());
+
+        tag(ModTags.Items.TRANSFORMABLE_ITEMS)
+                .add(ModItems.AETHER_CRYSTAL.getKey());
+
+        tag(ModTags.Items.AETHER_REPAIRABLE)
+                .add(ModItems.AETHER_CRYSTAL.getKey());
+
+        tag(ItemTags.SWORDS).add(ModItems.AETHER_SWORD.getKey());
+        tag(ItemTags.PICKAXES).add(ModItems.AETHER_PICKAXE.getKey());
+        tag(ItemTags.SHOVELS).add(ModItems.AETHER_SHOVEL.getKey());
+        tag(ItemTags.AXES).add(ModItems.AETHER_AXE.getKey());
+        tag(ItemTags.HOES).add(ModItems.AETHER_HOE.getKey());
     }
 }

@@ -33,6 +33,26 @@ public class ModBlocks {
             (properties) -> new DropExperienceBlock(UniformInt.of(5, 9),
                     properties.strength(7f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+    public static final DeferredBlock<Block> GREEK_STEEL_ORE = registerBlock("greek_steel_ore",
+            (properties) -> new DropExperienceBlock(UniformInt.of(5, 9),
+                    properties.strength(7f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> AETHER_ORE = registerBlock("aether_ore",
+            (properties) -> new DropExperienceBlock(UniformInt.of(5, 9),
+                    properties.strength(7f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> SUNSTONE_ORE = registerBlock("sunstone_ore",
+            (properties) -> new DropExperienceBlock(UniformInt.of(5, 9),
+                    properties.strength(7f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> ORICHALCUM_ORE = registerBlock("orichalcum_ore",
+            (properties) -> new DropExperienceBlock(UniformInt.of(5, 9),
+                    properties.strength(7f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> STYGIAN_ORE = registerBlock("stygian_ore",
+            (properties) -> new DropExperienceBlock(UniformInt.of(5, 9),
+                    properties.strength(7f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
     public static final DeferredBlock<Block> ZENITH_BLOCK = registerBlock("zenith_block",
             properties -> new Block(properties.strength(8f)
                     .requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));

@@ -30,6 +30,15 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.KEYSTONE_FRAGMENT.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.KEYSTONE_SHARD.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.KEYSTONE_PORTAL_CORE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.RAW_GREEK_STEEL.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.GREEK_STEEL_INGOT.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.STYGIAN_INGOT.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.RAW_STYGIAN.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.RAW_ORICHALCUM.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.ORICHALCUM_INGOT.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.SUNSTONE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.AETHER_CRYSTAL.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.MINOTAUR_HORN.get(), ModelTemplates.FLAT_ITEM);
 
         itemModels.generateFlatItem(ModItems.ZENITH_SWORD.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(ModItems.ZENITH_PICKAXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
@@ -37,6 +46,33 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.ZENITH_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(ModItems.ZENITH_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateBow(ModItems.ZENITH_BOW.get());
+
+        itemModels.generateFlatItem(ModItems.GREEK_STEEL_SWORD.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.GREEK_STEEL_PICKAXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.GREEK_STEEL_SHOVEL.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.GREEK_STEEL_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.GREEK_STEEL_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+
+        itemModels.generateFlatItem(ModItems.AETHER_SWORD.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.AETHER_PICKAXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.AETHER_SHOVEL.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.AETHER_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.AETHER_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+
+        itemModels.generateFlatItem(ModItems.ORICHALCUM_SWORD.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.ORICHALCUM_PICKAXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.ORICHALCUM_SHOVEL.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.ORICHALCUM_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.ORICHALCUM_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+
+        itemModels.generateFlatItem(ModItems.STYGIAN_SWORD.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.STYGIAN_PICKAXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.STYGIAN_SHOVEL.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.STYGIAN_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.STYGIAN_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+
+        itemModels.generateFlatItem(ModItems.LABYRINTH_BATTLE_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+
 
         itemModels.generateTrimmableItem(ModItems.ZENITH_HELMET.get(), ModArmorMaterials.ZENITH_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
         itemModels.generateTrimmableItem(ModItems.ZENITH_CHESTPLATE.get(), ModArmorMaterials.ZENITH_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
@@ -49,6 +85,11 @@ public class ModModelProvider extends ModelProvider {
 
         /* BLOCKS */
         blockModels.createTrivialCube(ModBlocks.ZENITH_END_ORE.get());
+        blockModels.createTrivialCube(ModBlocks.GREEK_STEEL_ORE.get());
+        blockModels.createTrivialCube(ModBlocks.AETHER_ORE.get());
+        blockModels.createTrivialCube(ModBlocks.ORICHALCUM_ORE.get());
+        blockModels.createTrivialCube(ModBlocks.SUNSTONE_ORE.get());
+        blockModels.createTrivialCube(ModBlocks.STYGIAN_ORE.get());
         blockModels.createTrivialCube(ModBlocks.ZENITH_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.KEYSTONE_ORE.get());
         blockModels.createTrivialCube(ModBlocks.ANCIENT_DIRT.get());

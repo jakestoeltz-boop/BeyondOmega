@@ -182,3 +182,258 @@ idea {
         downloadJavadoc = true
     }
 }
+// ============================================================
+// BEYOND OMEGA ITEM TEXTURE ALPHA CLEANUP
+// ============================================================
+//
+// Minecraft 26.2 determines whether an item texture should use
+// cutout or translucent rendering from the PNG's alpha values.
+//
+// Alpha:
+// 0       = fully transparent
+// 255     = fully opaque
+// 1 - 254 = partially transparent
+//
+// This modifies ONLY the copies inside build/resources.
+// Your original PNG files in src/main/resources are untouched.
+// ============================================================
+
+def beyondOmegaTextureModId = mod_id
+
+tasks.named("processResources", ProcessResources).configure {
+
+    doLast {
+
+        // --------------------------------------------------------
+        // ALPHA THRESHOLD
+        // --------------------------------------------------------
+        //
+        // 0 - 127   -> fully transparent
+        // 128 - 255 -> fully opaque
+        //
+        // Lower this if the edges of your items become too thin.
+        //
+        int alphaThreshold = 128
+
+
+        // --------------------------------------------------------
+        // GET PROCESSRESOURCES OUTPUT DIRECTORY
+        // --------------------------------------------------------
+        //
+        // ProcessResources uses destinationDir in Gradle 9.
+        //
+
+        File resourceOutput = getDestinationDir()
+
+
+        File itemTextureDirectory = new File(
+                resourceOutput,
+                "assets/${beyondOmegaTextureModId}/textures/item"
+        )
+
+
+        // --------------------------------------------------------
+        // CHECK THAT THE DIRECTORY EXISTS
+        // --------------------------------------------------------
+
+        if (!itemTextureDirectory.exists()) {
+
+            logger.lifecycle("")
+            logger.lifecycle(
+                    "[Beyond Omega] No item texture directory found:"
+            )
+            logger.lifecycle(
+                    "[Beyond Omega] ${itemTextureDirectory.absolutePath}"
+            )
+            logger.lifecycle("")
+
+            return
+        }
+
+
+        logger.lifecycle("")
+        logger.lifecycle("==========================================")
+        logger.lifecycle(" Beyond Omega Item Texture Alpha Cleanup")
+        logger.lifecycle("==========================================")
+        logger.lifecycle("")
+        logger.lifecycle(
+                "[Beyond Omega] Threshold: ${alphaThreshold}"
+        )
+        logger.lifecycle(
+                "[Beyond Omega] Folder: ${itemTextureDirectory.absolutePath}"
+        )
+        logger.lifecycle("")
+
+
+        int texturesChecked = 0
+        int texturesChanged = 0
+        int pixelsChanged = 0
+
+
+        // --------------------------------------------------------
+        // SCAN EVERY FILE INSIDE textures/item
+        // --------------------------------------------------------
+        //
+        // eachFileRecurse also handles future subfolders.
+        //
+
+        itemTextureDirectory.eachFileRecurse { File pngFile ->
+
+
+            // Only process actual PNG files
+            if (
+                    pngFile.isFile()
+                            && pngFile.name.toLowerCase().endsWith(".png")
+            ) {
+
+                texturesChecked++
+
+
+                // ------------------------------------------------
+                // LOAD IMAGE
+                // ------------------------------------------------
+
+                def image = javax.imageio.ImageIO.read(pngFile)
+
+
+                if (image == null) {
+
+                    logger.warn(
+                            "[Beyond Omega] Could not read PNG: ${pngFile.name}"
+                    )
+
+                } else {
+
+                    boolean changedTexture = false
+                    int changedPixelsInTexture = 0
+
+
+                    // --------------------------------------------
+                    // CHECK EVERY PIXEL
+                    // --------------------------------------------
+
+                    for (int y = 0; y < image.getHeight(); y++) {
+
+                        for (int x = 0; x < image.getWidth(); x++) {
+
+
+                            // Current ARGB color
+                            int argb = image.getRGB(x, y)
+
+
+                            // Extract the alpha channel
+                            int alpha = (argb >>> 24) & 0xFF
+
+
+                            // ------------------------------------
+                            // CLAMP ALPHA
+                            // ------------------------------------
+                            //
+                            // Below threshold = invisible
+                            // Threshold+       = fully opaque
+                            //
+
+                            int newAlpha =
+                                    alpha < alphaThreshold
+                                            ? 0
+                                            : 255
+
+
+                            // ------------------------------------
+                            // ONLY MODIFY IF NEEDED
+                            // ------------------------------------
+
+                            if (newAlpha != alpha) {
+
+
+                                // Keep RGB exactly the same.
+                                // Only replace the alpha byte.
+
+                                int cleanedARGB =
+                                        (argb & 0x00FFFFFF)
+                                                | (newAlpha << 24)
+
+
+                                image.setRGB(
+                                        x,
+                                        y,
+                                        cleanedARGB
+                                )
+
+
+                                changedTexture = true
+                                changedPixelsInTexture++
+                                pixelsChanged++
+                            }
+                        }
+                    }
+
+
+                    // --------------------------------------------
+                    // WRITE CLEANED BUILD COPY
+                    // --------------------------------------------
+
+                    if (changedTexture) {
+
+                        boolean successfullyWritten =
+                                javax.imageio.ImageIO.write(
+                                        image,
+                                        "png",
+                                        pngFile
+                                )
+
+
+                        if (successfullyWritten) {
+
+                            texturesChanged++
+
+
+                            String relativePath =
+                                    itemTextureDirectory
+                                            .toPath()
+                                            .relativize(
+                                                    pngFile.toPath()
+                                            )
+                                            .toString()
+
+
+                            logger.lifecycle(
+                                    "[Beyond Omega] Cleaned: " +
+                                            "${relativePath} " +
+                                            "(${changedPixelsInTexture} pixels)"
+                            )
+
+                        } else {
+
+                            logger.warn(
+                                    "[Beyond Omega] Failed to write: " +
+                                            "${pngFile.name}"
+                            )
+                        }
+                    }
+                }
+            }
+        }
+
+
+        // --------------------------------------------------------
+        // RESULTS
+        // --------------------------------------------------------
+
+        logger.lifecycle("")
+        logger.lifecycle("------------------------------------------")
+        logger.lifecycle("[Beyond Omega] Alpha cleanup finished")
+        logger.lifecycle("------------------------------------------")
+        logger.lifecycle(
+                "[Beyond Omega] Textures checked : ${texturesChecked}"
+        )
+        logger.lifecycle(
+                "[Beyond Omega] Textures changed : ${texturesChanged}"
+        )
+        logger.lifecycle(
+                "[Beyond Omega] Pixels changed   : ${pixelsChanged}"
+        )
+        logger.lifecycle("------------------------------------------")
+        logger.lifecycle("")
+    }
+}

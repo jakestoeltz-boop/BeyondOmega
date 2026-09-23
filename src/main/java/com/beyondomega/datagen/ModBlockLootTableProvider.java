@@ -45,6 +45,21 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.ZENITH_END_ORE.get(),
                 createMultipleOreDrops(ModBlocks.ZENITH_END_ORE.get(), ModItems.ZENITH_CORE.get(), 1, 2));
 
+        add(ModBlocks.GREEK_STEEL_ORE.get(),
+                createMultipleOreDrops(ModBlocks.GREEK_STEEL_ORE.get(), ModItems.RAW_GREEK_STEEL.get(), 1, 1));
+
+        add(ModBlocks.ORICHALCUM_ORE.get(),
+                createMultipleOreDrops(ModBlocks.ORICHALCUM_ORE.get(), ModItems.RAW_ORICHALCUM.get(), 1, 1));
+
+        add(ModBlocks.STYGIAN_ORE.get(),
+                createMultipleOreDrops(ModBlocks.STYGIAN_ORE.get(), ModItems.RAW_STYGIAN.get(), 1, 1));
+
+        add(ModBlocks.SUNSTONE_ORE.get(),
+                createMultipleOreDrops(ModBlocks.SUNSTONE_ORE.get(), ModItems.SUNSTONE.get(), 1, 3));
+
+        add(ModBlocks.AETHER_ORE.get(),
+                createMultipleOreDrops(ModBlocks.AETHER_ORE.get(), ModItems.AETHER_CRYSTAL.get(), 1, 2));
+
         add(
                 ModBlocks.KEYSTONE_ORE.get(),
                 LootTable.lootTable()
