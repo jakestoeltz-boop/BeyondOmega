@@ -1,21 +1,62 @@
 {
-    "creativetab.beyondomega.natural_blocks": "Beyond Omega: Natural Blocks",
-    "creativetab.beyondomega.crafted_blocks": "Beyond Omega: Crafted Blocks",
-    "creativetab.beyondomega.ingredients": "Beyond Omega: Ingredients",
-    "creativetab.beyondomega.tools": "Beyond Omega: Tools",
-    "creativetab.beyondomega.weapons_armor": "Beyond Omega: Weapons & Armor",
+  "creativetab.beyondomega.natural_blocks": "Beyond Omega: Natural Blocks",
+  "creativetab.beyondomega.crafted_blocks": "Beyond Omega: Crafted Blocks",
+  "creativetab.beyondomega.ingredients": "Beyond Omega: Ingredients",
+  "creativetab.beyondomega.tools": "Beyond Omega: Tools",
+  "creativetab.beyondomega.weapons_armor": "Beyond Omega: Weapons & Armor",
 
   "item.beyondomega.riftstone_shard": "Riftstone Shard",
   "item.beyondomega.umbral_shard": "Umbral Shard",
-  "item.beyondomega.zenith_core": "Zenith Core",
   "item.beyondomega.keystone_shard": "Keystone Shard",
   "item.beyondomega.keystone_fragment": "Keystone Fragment",
   "item.beyondomega.keystone_portal_core": "Keystone Portal Core",
 
+  "item.beyondomega.raw_greek_steel": "Raw Greek Steel",
+  "item.beyondomega.greek_steel_ingot": "Greek Steel Ingot",
+
+  "item.beyondomega.aether_crystal": "Aether Crystal",
+  "item.beyondomega.sunstone": "Sunstone",
+
+  "item.beyondomega.raw_orichalcum": "Raw Orichalcum",
+  "item.beyondomega.orichalcum_ingot": "Orichalcum Ingot",
+
+  "item.beyondomega.raw_stygian": "Raw Stygian",
+  "item.beyondomega.stygian_ingot": "Stygian Ingot",
+
+  "item.beyondomega.minotaur_horn": "Minotaur Horn",
+
+  "item.beyondomega.zenith_core": "Zenith Core",
+
+  "item.beyondomega.greek_steel_sword": "Greek Steel Sword",
+  "item.beyondomega.greek_steel_pickaxe": "Greek Steel Pickaxe",
+  "item.beyondomega.greek_steel_axe": "Greek Steel Axe",
+  "item.beyondomega.greek_steel_shovel": "Greek Steel Shovel",
+  "item.beyondomega.greek_steel_hoe": "Greek Steel Hoe",
+
+  "item.beyondomega.aether_sword": "Aether Sword",
+  "item.beyondomega.aether_pickaxe": "Aether Pickaxe",
+  "item.beyondomega.aether_axe": "Aether Axe",
+  "item.beyondomega.aether_shovel": "Aether Shovel",
+  "item.beyondomega.aether_hoe": "Aether Hoe",
+
+  "item.beyondomega.orichalcum_sword": "Orichalcum Sword",
+  "item.beyondomega.orichalcum_pickaxe": "Orichalcum Pickaxe",
+  "item.beyondomega.orichalcum_axe": "Orichalcum Axe",
+  "item.beyondomega.orichalcum_shovel": "Orichalcum Shovel",
+  "item.beyondomega.orichalcum_hoe": "Orichalcum Hoe",
+
+  "item.beyondomega.stygian_sword": "Stygian Sword",
+  "item.beyondomega.stygian_pickaxe": "Stygian Pickaxe",
+  "item.beyondomega.stygian_axe": "Stygian Axe",
+  "item.beyondomega.stygian_shovel": "Stygian Shovel",
+  "item.beyondomega.stygian_hoe": "Stygian Hoe",
+
+  "item.beyondomega.labyrinth_battle_axe": "Labyrinth Battle Axe",
+
   "item.beyondomega.zenith_sword": "Zenith Sword",
   "item.beyondomega.zenith_pickaxe": "Zenith Pickaxe",
-  "item.beyondomega.zenith_shovel": "Zenith Shovel",
   "item.beyondomega.zenith_axe": "Zenith Axe",
+  "item.beyondomega.zenith_shovel": "Zenith Shovel",
   "item.beyondomega.zenith_hoe": "Zenith Hoe",
   "item.beyondomega.zenith_bow": "Zenith Bow",
 
@@ -24,31 +65,40 @@
   "item.beyondomega.zenith_leggings": "Zenith Leggings",
   "item.beyondomega.zenith_boots": "Zenith Boots",
 
+  "item.beyondomega.beyond_omega_tab_icon": "Beyond Omega",
+  "item.beyondomega.minotaur_achievement_icon": "Minotaur",
+
   "block.beyondomega.ancient_dirt": "Ancient Dirt",
   "block.beyondomega.ancient_grass_block": "Ancient Grass Block",
   "block.beyondomega.sunbaked_dirt": "Sunbaked Dirt",
   "block.beyondomega.sunbaked_grass_block": "Sunbaked Grass Block",
+
   "block.beyondomega.limestone": "Limestone",
   "block.beyondomega.weathered_limestone": "Weathered Limestone",
   "block.beyondomega.marble": "Marble",
   "block.beyondomega.marble_bricks": "Marble Bricks",
 
-  "block.beyondomega.zenith_end_ore": "Zenith End Ore",
   "block.beyondomega.keystone_ore": "Keystone Ore",
 
+  "block.beyondomega.greek_steel_ore": "Greek Steel Ore",
+  "block.beyondomega.aether_ore": "Aether Ore",
+  "block.beyondomega.sunstone_ore": "Sunstone Ore",
+  "block.beyondomega.orichalcum_ore": "Orichalcum Ore",
+  "block.beyondomega.stygian_ore": "Stygian Ore",
+
+  "block.beyondomega.zenith_end_ore": "Zenith End Ore",
   "block.beyondomega.zenith_block": "Zenith Block",
 
   "block.beyondomega.greek_portal_frame": "Greek Portal Frame",
-
-  "creativetab.beyondomega.zenith_core_items": "Beyond Omega Items",
-  "creativetab.beyondomega.zenith_ore_blocks": "Beyond Omega Blocks",
 
   "entity.beyondomega.minotaur": "Minotaur",
 
   "advancements.beyondomega.greek.root.title": "Beyond Omega",
   "advancements.beyondomega.greek.root.description": "Legends of the ancient world await.",
+
   "advancements.beyondomega.greek.defeat_minotaur.title": "Slayer of the Minotaur",
   "advancements.beyondomega.greek.defeat_minotaur.description": "Defeat the Minotaur within the Labyrinth.",
+
   "advancements.beyondomega.greek.enter_greek_realm.title": "A World of Legends",
   "advancements.beyondomega.greek.enter_greek_realm.description": "Enter the Greek Realm for the first time."
 }
